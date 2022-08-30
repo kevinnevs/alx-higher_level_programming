@@ -1,4 +1,6 @@
 #include <Python.h>
+#include "listobject.h"
+#include "object.h"
 
 /*
 includes listobject.h
