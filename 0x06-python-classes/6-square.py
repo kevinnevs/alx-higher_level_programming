@@ -18,7 +18,7 @@ class Square:
     size(self)
     size(self, value)
     position(self)
-    position(self, value(
+    position(self, value)
     area(self)
     my_print(self)
     """
