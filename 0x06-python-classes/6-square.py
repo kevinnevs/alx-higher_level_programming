@@ -18,7 +18,7 @@ class Square:
     size(self)
     size(self, value)
     position(self)
-    position(self, value(
+    position(self, value)
     area(self)
     my_print(self)
     """
@@ -31,7 +31,7 @@ class Square:
             size (int): defaults to 0 if none; don't use __size to call setter
             position (int): tuples of two positive integers
         """
-        self.size = size
+        self.__size = size
         self.position = position
 
     # Property
