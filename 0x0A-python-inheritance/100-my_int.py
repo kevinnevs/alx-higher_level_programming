@@ -20,4 +20,4 @@ class MyInt(int):
         """
         Magic method not equals
         """
-        return super().__ne__(value)
+        return super().__eq__(value)
