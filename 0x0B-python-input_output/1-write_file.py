@@ -16,4 +16,4 @@ def write_file(filename="", text=""):
             writeFile.write(text)
         else:
             writeFile.write(text)
-    return text
+    return len(text)
