@@ -56,10 +56,9 @@ class TestBase(unittest.TestCase):
         self.assertCountEqual(Base.to_json_string(o1_2), '[{"hello": 3}]')
         self.assertCountEqual(Base.to_json_string(o1_3), '[]')
         self.assertCountEqual(Base.to_json_string(o1_4), '"a string"')
-        with self.assertRaises(TypeError):
-            Base.to_json_string(o1_5)
-        self.assertCountEqual(Base.to_json_string(o1_6), '[[1, 2, 3]]')
-        self.assertCountEqual(Base.to_json_string(o1_7), '[]')
+        self.assertCountEqual(Base.to_json_string(o1_5), '[[1, 2, 3]]')
+        self.assertCountEqual(Base.to_json_string(o1_6), '[]')
+        self.assertCountEqual(Base.to_json_string(o1_7), [])
 
     def test_from_json_string(self):
         """Testing from_json_string(), uses to_json_string to format,
