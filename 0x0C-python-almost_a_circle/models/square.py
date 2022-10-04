@@ -11,7 +11,7 @@ Returns dictionary representation of attributes
 from models.rectangle import Rectangle
 
 
-class Square(Rectangle):    
+class Square(Rectangle):
     """
     defines class Square; inherits from class Rectangle
     Inherited Attributes:
