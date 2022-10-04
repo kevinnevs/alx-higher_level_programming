@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-"""Unittest for class Base
+"""
+Unittest for class Base
 """
 import unittest
 import os
@@ -9,17 +10,20 @@ from models.square import Square
 
 
 class TestBase(unittest.TestCase):
-    """Testing Base
+    """
+    Testing Base
     """
 
     def tearDown(self):
-        """Tears down obj count
+        """
+        Tears down obj count
         """
         Base._Base__nb_objects = 0
         self.assertEqual(Base._Base__nb_objects, 0)
 
     def test_instance(self):
-        """Test instantiation
+        """
+        Test instantiation
         """
 
         o1 = Base()
@@ -40,7 +44,8 @@ class TestBase(unittest.TestCase):
         self.assertEqual(Base._Base__nb_objects, 2)
 
     def test_to_json_string(self):
-        """Testing to_json_string()
+        """
+        Testing to_json_string()
         """
 
         o1_1 = [{"hi": 1, "yo": "hol"}]
@@ -62,7 +67,8 @@ class TestBase(unittest.TestCase):
         self.assertCountEqual(Base.to_json_string(o1_7), '[]')
 
     def test_from_json_string(self):
-        """Testing from_json_string(), uses to_json_string to format,
+        """
+        Testing from_json_string(), uses to_json_string to format,
         anything not in format should return []
         """
 
@@ -92,7 +98,8 @@ class TestBase(unittest.TestCase):
         self.assertEqual(Base.from_json_string(o2_7), [])
 
     def test_create(self):
-        """Testing create()
+        """
+        Testing create()
         """
 
         o3_1 = {'id': 1, 'width': 1, 'height': 2, 'x': 2, 'y': 2}
@@ -110,7 +117,8 @@ class TestBase(unittest.TestCase):
             s3_2 = Square.create(**o3_3)
 
     def test_save_to_file(self):
-        """Testing save_to_file()
+        """
+        Testing save_to_file()
         """
 
         o4_1 = Rectangle(10, 7, 2, 8)
@@ -125,7 +133,8 @@ class TestBase(unittest.TestCase):
         self.assertTrue(os.path.isfile('Square.json'))
 
     def test_load_from_file(self):
-        """Testing load_from_file()
+        """
+        Testing load_from_file()
         """
 
         o5_1 = Rectangle(10, 7, 2, 8)
