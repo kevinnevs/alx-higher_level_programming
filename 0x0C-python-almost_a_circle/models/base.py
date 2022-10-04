@@ -27,7 +27,7 @@ class Base:
         """
         Returns JSON string representation
         """
-        if list_dictionaries is None:
+        if list_dictionaries is None or len(list_dictionaries) == 0:
             return "[]"
         else:
             return json.dumps(list_dictionaries)
@@ -35,12 +35,12 @@ class Base:
     @staticmethod
     def from_json_string(json_string):
         """
-        Returns the list of JSON string rep json_string
+        Returns JSON strings in list
         """
-        if json_string is None or len(json_string) == 0:
-            json_string = "[]"
+        if type(json_string) != str or len(json_string) == 0:
+            return []
         return json.loads(json_string)
-
+    
     @classmethod
     def save_to_file(cls, list_objs):
         """
