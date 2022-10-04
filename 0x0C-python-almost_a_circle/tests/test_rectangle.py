@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-"""Unittest for class Rectangle
+"""
+Unittest for class Rectangle
 """
 import unittest
 import os
@@ -11,18 +12,21 @@ from models.square import Square
 
 
 class TestRectangle(unittest.TestCase):
-    """Testing Rectangle
+    """
+    Testing Rectangle
     """
 
     def tearDown(self):
-        """Tears down obj count
+        """
+        Tears down obj count
         """
 
         Base._Base__nb_objects = 0
         self.assertEqual(Base._Base__nb_objects, 0)
 
     def test_instance(self):
-        """Test instantiation
+        """
+        Test instantiation
         """
 
         o1 = Rectangle(3, 2)
@@ -41,7 +45,8 @@ class TestRectangle(unittest.TestCase):
         self.assertEqual(o2._Base__nb_objects, 1)
 
     def test_area(self):
-        """Testing area()
+        """
+        Testing area()
         """
 
         o1 = Rectangle(3, 2)
@@ -53,7 +58,8 @@ class TestRectangle(unittest.TestCase):
         self.assertEqual(o3.area(), 998001)
 
     def test_display(self):
-        """Testing display()
+        """
+        Testing display()
         """
 
         o1 = Rectangle(3, 2)
@@ -68,7 +74,8 @@ class TestRectangle(unittest.TestCase):
                              '\n####\n####\n####\n####\n####\n')
 
     def test_str(self):
-        """Testing __str__()
+        """
+        Testing __str__()
         """
 
         o1 = Rectangle(3, 2)
@@ -82,7 +89,8 @@ class TestRectangle(unittest.TestCase):
         self.assertEqual(o4.__str__(), '[Rectangle] (holberton) 0/0 - 3/2')
 
     def test_update(self):
-        """Testing update()
+        """
+        Testing update()
         """
 
         o1 = Rectangle(3, 2)
@@ -102,7 +110,8 @@ class TestRectangle(unittest.TestCase):
         self.assertEqual(o5.__str__(), '[Rectangle] (-5) 0/0 - 3/2')
 
     def test_to_dictionary(self):
-        """Testing to_dictionary()
+        """
+        Testing to_dictionary()
         """
 
         o1 = Rectangle(3, 2)
