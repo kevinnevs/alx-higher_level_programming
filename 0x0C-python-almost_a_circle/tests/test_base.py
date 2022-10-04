@@ -47,7 +47,7 @@ class TestBase(unittest.TestCase):
         o1_2 = [{"hello": 3}]
         o1_3 = None
         o1_4 = "a string"
-        o1_5 = 123
+        o1_5 = "123"
         o1_6 = [[1, 2, 3]]
         o1_7 = []
 
@@ -56,7 +56,7 @@ class TestBase(unittest.TestCase):
         self.assertCountEqual(Base.to_json_string(o1_2), '[{"hello": 3}]')
         self.assertCountEqual(Base.to_json_string(o1_3), '[]')
         self.assertCountEqual(Base.to_json_string(o1_4), '"a string"')
-        with self.assertRaises(ValueError):
+        with self.assertRaises(TypeError):
             Base.to_json_string(o1_5)
         self.assertCountEqual(Base.to_json_string(o1_6), '[[1, 2, 3]]')
         self.assertCountEqual(Base.to_json_string(o1_7), '[]')
