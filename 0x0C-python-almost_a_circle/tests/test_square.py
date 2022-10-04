@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-"""Unittest for class Square
+"""
+Unittest for class Square
 """
 import unittest
 import os
@@ -11,18 +12,21 @@ from models.square import Square
 
 
 class TestSquare(unittest.TestCase):
-    """Testing Square
+    """
+    Testing Square
     """
 
     def tearDown(self):
-        """Tears down obj count
+        """
+        Tears down obj count
         """
 
         Base._Base__nb_objects = 0
         self.assertEqual(Base._Base__nb_objects, 0)
 
     def test_instance(self):
-        """Test instantiation
+        """
+        Test instantiation
         """
 
         o1 = Square(5)
@@ -47,7 +51,8 @@ class TestSquare(unittest.TestCase):
         self.assertEqual(o2._Base__nb_objects, 3)
 
     def test_area(self):
-        """Testing area()
+        """
+        Testing area()
         """
 
         o1 = Square(5)
@@ -59,7 +64,8 @@ class TestSquare(unittest.TestCase):
         self.assertEqual(o3.area(), 9)
 
     def test_display(self):
-        """Testing display()
+        """
+        Testing display()
         """
 
         o1 = Square(4)
@@ -74,7 +80,8 @@ class TestSquare(unittest.TestCase):
             self.assertEqual(fakeOutput.getvalue(), ' ###\n ###\n ###\n')
 
     def test_str(self):
-        """Testing __str__()
+        """
+        Testing __str__()
         """
 
         o1 = Square(5)
@@ -88,7 +95,8 @@ class TestSquare(unittest.TestCase):
         self.assertEqual(o4.__str__(), '[Square] (hello) 1/0 - 3')
 
     def test_update(self):
-        """Testing update()
+        """
+        Testing update()
         """
 
         o1 = Square(5)
@@ -105,7 +113,8 @@ class TestSquare(unittest.TestCase):
             o4.update(x=9.5)
 
     def test_to_dictionary(self):
-        """Testing to_dictionary()
+        """
+        Testing to_dictionary()
         """
 
         o1 = Square(5)
