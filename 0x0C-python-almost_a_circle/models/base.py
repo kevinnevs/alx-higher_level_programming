@@ -37,7 +37,7 @@ class Base:
         """
         Returns the list of JSON string rep json_string
         """
-        if json_string is None or len(json_string) == 0:
+        if json_string is None:
             json_string = "[]"
         return json.loads(json_string)
 
