@@ -47,7 +47,7 @@ class TestBase(unittest.TestCase):
         o1_2 = [{"hello": 3}]
         o1_3 = None
         o1_4 = "a string"
-        o1_5 = "123"
+        o1_5 = 123
         o1_6 = [[1, 2, 3]]
         o1_7 = []
 
