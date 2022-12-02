@@ -6,6 +6,7 @@ Script that lists all the states from the database hbtn_0e_0_usa
 import MySQLdb
 import sys
 
+
 def get_states():
     """
     Takes arguments argv to list databases
@@ -28,9 +29,9 @@ def get_states():
     for i in rows:
         print(i)
 
-
     cur.close()
     db.close()
+
 
 if __name__ == "__main__":
     get_states()
