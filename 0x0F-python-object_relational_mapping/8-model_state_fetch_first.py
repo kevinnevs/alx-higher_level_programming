@@ -9,7 +9,7 @@ from sqlalchemy.orm import sessionmaker
 from model_state import Base, State
 
 
-def list_state_obj():
+def first_state_obj():
     engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'.format
                            (sys.argv[1], sys.argv[2], sys.argv[3]),
                            pool_pre_ping=True)
@@ -33,4 +33,4 @@ def list_state_obj():
 
 
 if __name__ == "__main__":
-    list_state_obj()
+    first_state_obj()
