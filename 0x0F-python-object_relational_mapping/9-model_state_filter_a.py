@@ -19,8 +19,8 @@ def filter_state_obj_a():
     session = Session()
 
     """query all State objects from the database"""
-    states =
-    session.query(State).filter(State.name.contains('a')).order_by(State.id)
+    states = session.query(State).filter(State.name.contains('a')
+                                         ).order_by(State.id)
 
     """print each State object"""
     for state in states:
