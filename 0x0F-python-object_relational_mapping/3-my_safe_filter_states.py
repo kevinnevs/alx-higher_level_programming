@@ -18,7 +18,6 @@ def filter_names_safe():
         argv[3]: database name
         argv[4]: argument name
     """
-    if len(sys.argv) == 5:
         db = MySQLdb.connect(host="localhost",
                              port=3306,
                              user=sys.argv[1],
@@ -35,8 +34,6 @@ def filter_names_safe():
 
         cur.close()
         db.close()
-    else:
-        return
 
 
 if __name__ == "__main__":
