@@ -28,6 +28,9 @@ def model_state_insert():
     """Commit the insert command"""
     session.commit()
 
+    """Print new state id for Louisianna"""
+    print(state.id)
+
     """closes session"""
     session.close()
 
