@@ -11,12 +11,12 @@ import sys
 def search_api():
     """status"""
     if len(sys.argv) > 1:
-        letter = sys.argv[1]
+        q = sys.argv[1]
     else:
-        letter = ""
+        q = ""
 
     response = requests.post('http://0.0.0.0:5000/search_user',
-                             data={'q': letter})
+                             data={'q': q})
 
     try:
         data = response.json()
