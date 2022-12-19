@@ -7,7 +7,9 @@ import json
 import requests
 import sys
 
-if __name__ == "__main__":
+
+def search_api():
+    """status"""
     if len(sys.argv) > 1:
         letter = sys.argv[1]
     else:
@@ -26,3 +28,7 @@ if __name__ == "__main__":
         print("No reesult")
     else:
         print("[{}] {}".format(data['id'], data['name']))
+
+
+if __name__ == "__main__":
+    search_api()
