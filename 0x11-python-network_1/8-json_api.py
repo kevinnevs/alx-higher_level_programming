@@ -3,7 +3,6 @@
 takes in a letter and sends a POST requests to
 'http://0.0.0.0:5000/search_user' with the letter as a parameter
 """
-import json
 import requests
 import sys
 
