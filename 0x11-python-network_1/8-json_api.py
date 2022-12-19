@@ -25,7 +25,7 @@ def search_api():
         sys.exit()
 
     if not data:
-        print("No reesult")
+        print("No result")
     else:
         print("[{}] {}".format(data['id'], data['name']))
 
