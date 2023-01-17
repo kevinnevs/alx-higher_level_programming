@@ -11,6 +11,10 @@ request(url, function (error, response, body) {
   if (error) {
     console.log(error);
   } else {
-    fs.writeFile(filePath, body, 'utf8');
-  }
+    fs.writeFile(filePath, body, 'utf8', function (error, result) {
+       if (error) {
+         console.log('error', error);
+       };
+    });
+  };
 });
