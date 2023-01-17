@@ -12,9 +12,9 @@ request(url, function (error, response, body) {
     console.log(error);
   } else {
     fs.writeFile(filePath, body, 'utf8', function (error, result) {
-       if (error) {
-         console.log('error', error);
-       };
+      if (error) {
+        console.log('error', error);
+      }
     });
-  };
+  }
 });
